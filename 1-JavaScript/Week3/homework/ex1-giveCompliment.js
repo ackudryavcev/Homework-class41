@@ -31,7 +31,9 @@ function giveCompliment(name) {
         'astounding',
         'stupefying',
     ];
-    return `You are ${compliments[Math.floor(Math.random() * 10)]}, ${name}!`;
+    return `You are ${
+    compliments[Math.floor(Math.random() * compliments.length)]
+  }, ${name}!`;
 }
 
 function main() {
