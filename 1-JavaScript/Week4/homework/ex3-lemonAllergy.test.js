@@ -39,14 +39,14 @@ describe('sanitizeFruitBasket', () => {
 
     test('should not modify the original `fruitBasket` array', () => {
         // Save the original contents of the fruit basket
-        const originalFruitBasketContents = [...fruitBasket].join(' ,');
+        const originalFruitBasketContents = [...fruitBasket];
         sanitizeFruitBasket(fruitBasket, 'lemon');
-        expect(originalFruitBasketContents).toBe(fruitBasket.join(' ,'));
+        expect(originalFruitBasketContents).toEqual(fruitBasket);
     });
 
     test('should return a new array that does not include the unwanted `lemon`', () => {
-        const result = sanitizeFruitBasket(fruitBasket, 'lemon').join(' ,');
-        const expected = ['apple', 'grapefruit', 'banana', 'watermelon'].join(' ,');
-        expect(result).toBe(expected);
+        const result = sanitizeFruitBasket(fruitBasket, 'lemon');
+        const expected = ['apple', 'grapefruit', 'banana', 'watermelon'];
+        expect(result).toEqual(expected);
     });
 });
