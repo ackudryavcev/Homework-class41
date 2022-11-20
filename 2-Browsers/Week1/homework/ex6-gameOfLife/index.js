@@ -48,9 +48,7 @@ function createGame(context, numRows, numColumns) {
     // Draw a cell onto the canvas
     function drawCell(cell) {
         // Draw cell background
-        let opacity; //a variable to set the transparency of the cell, the less transparent the cell, the longer it lives
-        if (cell.lifeTime < 4) opacity = 0.25 * cell.lifeTime;
-        else if (cell.lifeTime >= 4) opacity = 1;
+        const opacity = Math.min(1, cell.lifeTime * 0.25);
         context.fillStyle = '#303030';
         context.fillRect(
             cell.x * CELL_SIZE,
@@ -106,11 +104,11 @@ function createGame(context, numRows, numColumns) {
 
             if (numAlive === 2) {
                 // Living cell remains living, dead cell remains dead
-                if (cell.alive) ++cell.lifeTime;
+                if (cell.alive) cell.lifeTime++;
                 cell.nextAlive = cell.alive;
             } else if (numAlive === 3) {
                 // Dead cell becomes living, living cell remains living
-                cell.lifeTime = cell.alive ? ++cell.lifeTime : (cell.lifeTime = 1);
+                cell.lifeTime++;
                 cell.nextAlive = true;
             } else {
                 // Living cell dies, dead cell remains dead
