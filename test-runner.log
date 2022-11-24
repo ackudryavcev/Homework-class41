@@ -1112,3 +1112,23 @@ Ran all test suites matching /ex6-gameOfLife.test.js/i.
 2022-11-20 02:22:36 info: ------------------------------------------
 2022-11-20 02:22:39 info: All unit tests passed.
 2022-11-20 02:22:43 info: All steps were completed successfully
+2022-11-24 06:58:53 info: ----------------------------------------
+2022-11-24 06:58:53 info: >>> Running Unit Test `ex1-bookList` <<<
+2022-11-24 06:58:53 info: ----------------------------------------
+2022-11-24 06:59:00 info: All unit tests passed.
+2022-11-24 06:59:04 info: All steps were completed successfully
+2022-11-24 07:01:46 info: ------------------------------------------
+2022-11-24 07:01:46 info: >>> Running Unit Test `ex3-hijackLogo` <<<
+2022-11-24 07:01:46 info: ------------------------------------------
+2022-11-24 07:01:49 info: All unit tests passed.
+2022-11-24 07:01:53 info: All steps were completed successfully
+2022-11-24 07:18:17 info: --------------------------------------------
+2022-11-24 07:18:17 info: >>> Running Unit Test `ex4-whatsTheTime` <<<
+2022-11-24 07:18:17 info: --------------------------------------------
+2022-11-24 07:18:25 info: All unit tests passed.
+2022-11-24 07:18:29 info: All steps were completed successfully
+2022-11-24 07:36:24 info: ---------------------------------------
+2022-11-24 07:36:24 info: >>> Running Unit Test `ex5-catWalk` <<<
+2022-11-24 07:36:24 info: ---------------------------------------
+2022-11-24 07:36:31 info: All unit tests passed.
+2022-11-24 07:36:35 info: All steps were completed successfully

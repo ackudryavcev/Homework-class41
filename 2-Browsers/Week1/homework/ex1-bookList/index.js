@@ -22,8 +22,8 @@ function createBookList(books) {
     for (const book of books) {
         const itemBook = document.createElement('li');
         book.alreadyRead ?
-            (itemBook.style.backgroundColor = 'green') :
-            (itemBook.style.backgroundColor = 'red');
+            itemBook.classList.add('green') :
+            itemBook.classList.add('red');
         const imgOfBook = document.createElement('img');
         const titleOfBook = document.createElement('p');
         titleOfBook.textContent = `${book.title} - ${book.author}`;

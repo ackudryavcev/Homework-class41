@@ -12,11 +12,20 @@ function addCurrentTime() {
     dateString.textContent = 'Time:'; // for pass test
     document.body.appendChild(dateString);
     setInterval(() => {
-        const today = new Date();
-        dateString.textContent = `Time:${today.getHours()}:${today.getMinutes()}:${today.getSeconds()}`;
-    }, 1000);
+                console.clear();
+                const today = new Date();
+                const time = `Time:${
+      today.getHours() > 9 ? today.getHours() : `0${today.getHours()}`
+    }:${
+      today.getMinutes() > 9 ? today.getMinutes() : `0${today.getMinutes()}`
+    }:${
+      today.getSeconds() > 9 ? today.getSeconds() : `0${today.getSeconds()}`
+    }`;
+    dateString.textContent = time;
+    console.log(time);
+  }, 1000);
 }
 
-window.onload = function() {
-    addCurrentTime();
+window.onload = function () {
+  addCurrentTime();
 };
